@@ -15,6 +15,26 @@ pip3 install --upgrade pip
 pip3 install -r requirements.txt
 ```
 
+### Optional: Developer Environment Setup
+
+If you're planning to contribute or run tests/linters locally, install the developer dependencies to the environment. These include everything from `requirements.txt` (runtime) plus additional tools like `pytest`, `black`, `mypy`, and `flake8`:
+
+```bash
+python -m venv tft-venv 
+source tft-venv/bin/activate
+pip3 install --upgrade pip
+pip3 install -r requirements-devel.txt
+```
+
+Once installed, you can use:
+```bash
+pytest         # Run test suite
+black .        # Format code
+...
+```
+
+This step is **optional** and not required for using the Traffic Flow Test scripts.
+
 ## Configuration YAML fields:
 
 ```
